@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calorie Tracker Lite</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Calorie Tracker <span class="lite">Lite</span></h1>
+        <div class="limit-row">
+          <label for="limit">Daily limit</label>
+          <input id="limit" type="number" min="0" step="10" value="1700" />
+          <button id="saveLimit" class="btn">Save</button>
+        </div>
+        <div class="progress">
+          <div class="bar" id="bar" style="width: 0%"></div>
+        </div>
+        <div class="totals">
+          <span>Total: <strong id="total">0</strong> kcal</span>
+          <span>Remaining: <strong id="remaining">1700</strong> kcal</span>
+        </div>
+      </header>
+
+      <section class="input-row">
+        <input id="foodName" type="text" placeholder="Food (e.g. oats)" />
+        <input
+          id="foodCals"
+          type="number"
+          min="0"
+          step="1"
+          placeholder="Calories"
+        />
+        <button id="addBtn" class="btn primary">Add</button>
+        <button id="resetBtn" class="btn danger outline">Reset Day</button>
+      </section>
+
+      <section>
+        <ul id="list" class="list"></ul>
+      </section>
+
+      <footer class="footer">
+        <small
+          >Saved for <span id="today"></span> — data persists in your
+          browser.</small
+        >
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
